@@ -1,0 +1,46 @@
+{
+  "description": "Tiny gold set for evaluating DIAL structured extraction on synthetic turbofan PHM snippets (task-relevant maintenance notes).",
+  "criterion": "field_level_accuracy",
+  "samples": [
+    {
+      "id": "g01",
+      "text": "FD001 run log: engine 7 exceeded nominal fan speed after operational cycle 145. Fault mode noted as HPC degradation.",
+      "expected": {
+        "dataset_id": "FD001",
+        "engine_no": 7,
+        "cycle": 145,
+        "fault_mode": "HPC degradation"
+      }
+    },
+    {
+      "id": "g02",
+      "text": "Inspection report FD003 — Unit 12, last recorded cycle 98, combined HPC and fan degradation suspected.",
+      "expected": {
+        "dataset_id": "FD003",
+        "engine_no": 12,
+        "cycle": 98,
+        "fault_mode": "HPC and fan degradation"
+      }
+    },
+    {
+      "id": "g03",
+      "text": "Test trajectory FD002 engine_id=4 ended at cycle 200 before failure; six operating conditions; HPC degradation fault mode per scenario FD002.",
+      "expected": {
+        "dataset_id": "FD002",
+        "engine_no": 4,
+        "cycle": 200,
+        "fault_mode": "HPC degradation"
+      }
+    },
+    {
+      "id": "g04",
+      "text": "Prognostics note: for FD004 fleet member 22, monitor sensor drift from cycle 50 onward; multi-condition ops with HPC and fan degradation modes.",
+      "expected": {
+        "dataset_id": "FD004",
+        "engine_no": 22,
+        "cycle": 50,
+        "fault_mode": "HPC and fan degradation"
+      }
+    }
+  ]
+}
